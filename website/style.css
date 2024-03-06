@@ -1,0 +1,85 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html,body {
+    font-family: Verdana;       /*, Geneva, Tahoma, sans-serif;*/
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+body {
+    float: left;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h1,h2,h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 4000;
+    margin: 10px;
+}
+
+.content {
+    float: left;
+    width: 66.6666%;
+}
+
+.sidebar {
+    float: left;
+    width: 33.3333%;
+}
+
+
+.image-large {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    max-width: 80%;
+}
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+}
+
+thead {
+    color: #fff;
+    background-color: mediumpurple;
+}
+
+tr {
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    padding: 8px 8px 8px 16px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top;
+}
+
+th.third {
+    width: 33.3333%;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
