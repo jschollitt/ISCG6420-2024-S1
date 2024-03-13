@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 3</title>
+    <!--<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.min.css"
+
+    />-->
+    <link rel="stylesheet" href="./week3.css" />
+    
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav>
+          <a href="./index.html">Home</a>
+          <a href="./semantic.html">Semantic</a>
+          <a href="./week2.html">Week 2</a>
+        </nav>
+        <h1>Forms and Javascript</h1>
+      </header>
+      <section>
+        <h2 class="underline">JS Exercise 1, 2 and 3</h2>
+        <article class="container-third card">
+          <h3>Change text style on button click</h3>
+          <button type="button" onclick="changeTextStyle()">
+            Change Text Size
+          </button>
+          <p id="ex1Demo">
+            Change HTML element style attributes with Javascript.
+          </p>
+          <script>
+            var ex1Toggle = true;
+
+            function changeTextStyle() {
+              let element = document.getElementById("ex1Demo");
+
+              if (ex1Toggle === true) {
+                element.style.fontSize = "25px";
+                element.style.color = "red";
+              } else {
+                element.style.fontSize = "20px";
+                element.style.color = "black";
+              }
+              ex1Toggle = !ex1Toggle;
+            }
+          </script>
+        </article>
+        <article class="container-third card">
+          <h3>Change div colour on input change</h3>
+          <label for="ex2Colour"
+            >Color
+            <input
+              type="color"
+              name="colorpicker"
+              id="ex2Colour"
+              onchange="changeColour()"
+            />
+          </label>
+          <div id="ex2Demo"></div>
+          <script>
+            function changeColour() {
+              let element = document.getElementById("ex2Demo");
+              let newColour = document.getElementById("ex2Colour").value;
+              element.style.backgroundColor = newColour;
+            }
+          </script>
+        </article>
+        <article class="container-third card">
+          <h3>Change text style on range input</h3>
+          <label for="fontRange">
+            Font Size
+            <input
+              type="range"
+              min="10"
+              max="48"
+              id="fontRange"
+              oninput="changeTextSize()"
+            />
+          </label>
+          <p id="ex3Demo">
+            Javascript can change the style of an HTML element.
+          </p>
+          <script>
+            function changeTextSize() {
+              let element = document.getElementById("ex3Demo");
+              let newSize = document.getElementById("fontRange").value;
+              element.style.fontSize = newSize + "px";
+              console.log(
+                "element font size: " + element.style.fontSize.toString()
+              );
+            }
+          </script>
+        </article>
+      </section>
+      <section>
+        <h2 class="underline">Exercise CSS Animated Advertisement</h2>
+        <div id="adWrapper">
+          <div id="adScene1">
+            <div id="adScene1Background">
+              <img
+                src="./assets/lawrence-chismorie-unsplash.jpg"
+                alt="cruise passengers"
+              />
+            </div>
+            <div id="adScene1Line1">Homeward Bound?</div>
+            <div id="adScene1Line2">
+              <div id="adScene1Line2Text">Artistic</div>
+            </div>
+            <div id="adScene1Line3">
+              <div id="adScene1Line3Text">Odessey?</div>
+            </div>
+            <div id="adScene1Line4">
+              <div id="adScene1Line4Text">Vineyard</div>
+            </div>
+            <div id="adScene1Line5">
+              <div id="adScene1Line5Text">Voyage?</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
