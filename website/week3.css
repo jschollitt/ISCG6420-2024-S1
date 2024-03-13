@@ -104,6 +104,41 @@ main {
    margin-right: auto; 
 }
 
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+}
+
+thead {
+    color:#fff;
+    background-color: #206E32;
+}
+
+th {
+    padding: 8px 8px 8px 16px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+td {
+    text-align: center;
+}
+
+.btn-operator {
+    width: 100%;
+}
+
+.calc-input {
+    height: 25px;
+    width: 80%;
+    font-family: monospace;
+    font-size: 24px;
+}
+
 #ex2Demo {
     width: 250px; 
     height: 80px; 
