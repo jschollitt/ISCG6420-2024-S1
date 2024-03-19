@@ -1,4 +1,8 @@
-console.log("Hello World!");
+function adReplay() {
+    let ad = document.getElementById("adWrapper");
+    let copy = ad.cloneNode(true);
+    ad.replaceWith(copy);
+}
 
 function togglePico() {
     let form = document.getElementById("picoMePlease");
@@ -11,14 +15,6 @@ function togglePico() {
     }
 }
 
-function replaceAd() {
-    let ad = document.getElementById("adWrapper");
-    let copy = ad.cloneNode(true);
-    
-    ad.replaceWith(copy);
-}
-
-setInterval(replaceAd, 6000);
 
 
 

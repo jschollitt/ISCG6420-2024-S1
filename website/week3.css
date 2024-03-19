@@ -47,7 +47,8 @@ nav {
     color: #000;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
     margin: 0px 0px 16px 0px;
-    border-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
 }
 
 
@@ -65,7 +66,8 @@ nav a {
     white-space: nowrap;
     background-color: #206E32;
     color: #fff;
-    border-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
 }
 
 main {
@@ -145,6 +147,27 @@ td {
     background: yellow;
     margin: auto;
 }
+
+.example-group {
+    position: relative;
+    display: inline-block;
+  }
+
+  .example-input {
+    border-color: crimson;
+    padding: 8px;
+    border-radius: 5px;
+  }
+
+  .input-label {
+    background-color: white;
+    color: crimson;
+    font-size: 11px;
+    position: absolute;
+    left: 25px;
+    top: -7px;
+    padding: 0 2px;
+  }
 
 #adWrapper {
     width: 400px;
@@ -258,6 +281,19 @@ td {
     color: white;
 }
 
+#adScene2 {
+    visibility: visible;
+    animation-name: scene2;
+    animation-duration: 5s;
+}
+
+#adReplay {
+    position: absolute;
+    left: 170px;
+    top: 370px;
+    font-size: 60px;
+}
+
 @keyframes scene1 {
     0% {
         visibility: visible;
@@ -334,3 +370,18 @@ td {
         width: 300px;;
     }
 }
+
+@keyframes scene2 {
+    0% {
+        visibility: hidden;
+    }
+
+    99% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: visible;
+    }
+}
+

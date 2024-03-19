@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Week 3</title>
-    <link
+    <!--<link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.conditional.min.css"
-    />
+    />-->
     <link rel="stylesheet" href="./week3.css" />
+
+    <script src="https://kit.fontawesome.com/5cca347ecc.js" crossorigin="anonymous"></script>
+
   </head>
+
   <body>
     <script src="./app.js"></script>
     <main>
@@ -18,85 +22,41 @@
           <a href="./index.html">Home</a>
           <a href="./semantic.html">Semantic</a>
           <a href="./week2.html">Week 2</a>
+          <a href="./week3.html">Week 3</a>
         </nav>
-        <h1>Forms and Javascript</h1>
+        <h1>Week 4 - JavaScript</h1>
       </header>
       <section>
-        <h2 class="underline">Exercise - CSS with JS</h2>
-        <article class="container-third card">
-          <h3>Change text style on button click</h3>
-          <button type="button" onclick="changeTextStyle()">
-            Change Text Size
-          </button>
-          <p id="ex1Demo">
-            Change HTML element style attributes with Javascript.
-          </p>
-          <script>
-            var ex1Toggle = true;
-
-            function changeTextStyle() {
-              let element = document.getElementById("ex1Demo");
-
-              if (ex1Toggle === true) {
-                element.style.fontSize = "25px";
-                element.style.color = "red";
-              } else {
-                element.style.fontSize = "20px";
-                element.style.color = "black";
-              }
-              ex1Toggle = !ex1Toggle;
-            }
-          </script>
-        </article>
-        <article class="container-third card">
-          <h3>Change div colour on input change</h3>
-          <label for="ex2Colour"
-            >Color
-            <input
-              type="color"
-              name="colorpicker"
-              id="ex2Colour"
-              onchange="changeColour()"
+        <h2 class="underline">Forms</h2>
+        <div class="container-half card">
+          <form id="user-form">
+            <label for="first-name">First Name</label>
+            <input 
+            type="text" 
+            id="first-name" 
+            name="user_fname" 
+            required
+            style="width: 100%"
             />
-          </label>
-          <div id="ex2Demo"></div>
-          <script>
-            function changeColour() {
-              let element = document.getElementById("ex2Demo");
-              let newColour = document.getElementById("ex2Colour").value;
-              element.style.backgroundColor = newColour;
-            }
-          </script>
-        </article>
-        <article class="container-third card">
-          <h3>Change text style on range input</h3>
-          <label for="fontRange">
-            Font Size
-            <input
-              type="range"
-              min="10"
-              max="48"
-              id="fontRange"
-              oninput="changeTextSize()"
+            
+            <label for="last-name">Last Name</label>
+            <input 
+            type="text" 
+            id="last-name" 
+            name="user_lname" 
+            required
+            style="width: 100%"
             />
-          </label>
-          <p id="ex3Demo">
-            Javascript can change the style of an HTML element.
-          </p>
-          <script>
-            function changeTextSize() {
-              let element = document.getElementById("ex3Demo");
-              let newSize = document.getElementById("fontRange").value;
-              element.style.fontSize = newSize + "px";
-              console.log(
-                "element font size: " + element.style.fontSize.toString()
-              );
-            }
-          </script>
-        </article>
+            
+            <button type="button" id="user-form-submit">Create User</button>
+        </form>
+        </div>
+        <div class="container-half card" style="height: 200px; overflow: scroll;">
+          <div id="user-list"></div>
+        </div>
+        <script src="submit-form.js"></script>
       </section>
       <section>
-        <button onclick="adReplay()">Replay Ad</button>
 
         <h2 class="underline">Exercise CSS Animated Advertisement</h2>
         <div id="adWrapper">
@@ -119,6 +79,11 @@
             </div>
             <div id="adScene1Line5">
               <div id="adScene1Line5Text">Voyage?</div>
+            </div>
+          </div>
+          <div id="adScene2">
+            <div id="adReplay">
+              <i class="fa-solid fa-circle-play" onclick="adReplay()"></i>
             </div>
           </div>
         </div>
@@ -156,7 +121,6 @@
         </table>
       </section>
       <section>
-        <button onclick="togglePico()">Enable Pico</button>
         <form id="picoMePlease">
           <h2>Form elements</h2>
 
