@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Week 3</title>
+    <title>Week 4</title>
     <!--<link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.conditional.min.css"
     />-->
-    <link rel="stylesheet" href="./week3.css" />
+    <link rel="stylesheet" href="./week4.css" />
 
-    <script src="https://kit.fontawesome.com/5cca347ecc.js" crossorigin="anonymous"></script>
-
+    <script
+      src="https://kit.fontawesome.com/5cca347ecc.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -31,33 +33,35 @@
         <div class="container-half card">
           <form id="user-form">
             <label for="first-name">First Name</label>
-            <input 
-            type="text" 
-            id="first-name" 
-            name="user_fname" 
-            required
-            style="width: 100%"
+            <input
+              type="text"
+              id="first-name"
+              name="user_fname"
+              required
+              style="width: 100%"
             />
-            
+
             <label for="last-name">Last Name</label>
-            <input 
-            type="text" 
-            id="last-name" 
-            name="user_lname" 
-            required
-            style="width: 100%"
+            <input
+              type="text"
+              id="last-name"
+              name="user_lname"
+              required
+              style="width: 100%"
             />
-            
+
             <button type="button" id="user-form-submit">Create User</button>
-        </form>
+          </form>
         </div>
-        <div class="container-half card" style="height: 200px; overflow: scroll;">
+        <div
+          class="container-half card"
+          style="height: 200px; overflow: scroll"
+        >
           <div id="user-list"></div>
         </div>
         <script src="submit-form.js"></script>
       </section>
       <section>
-
         <h2 class="underline">Exercise CSS Animated Advertisement</h2>
         <div id="adWrapper">
           <div id="adScene1">
@@ -89,36 +93,10 @@
         </div>
       </section>
       <section>
-        <h2>JS Calculator Exercise</h2>
-        <table>
-          <thead>
-            <th>Number 1</th>
-            <th>Operator</th>
-            <th>Number 2</th>
-            <th></th>
-            <th>Result</th>
-          </thead>
-          <tr>
-            <td>
-              <input type="text" id="calcNum1" class="calc-input"/>
-            </td>
-            <td>
-              <button class="btn-operator" onclick="calculate('add')">Add</button>
-              <button class="btn-operator" onclick="calculate('sub')">Subtract</button>
-              <button class="btn-operator" onclick="calculate('mul')">Multiply</button>
-              <button class="btn-operator" onclick="calculate('div')">Divide</button>
-            </td>
-            <td>
-              <input type="text" id="calcNum2" class="calc-input"/>
-            </td>
-            <td>
-              =
-            </td>
-            <td>
-              <h3 id="calcResult"></h3>
-            </td>
-          </tr>
-        </table>
+        <div id="animWrapper">
+          <div id="animBlock"></div>
+        </div>
+        <script src="./adAnimation.js"></script>
       </section>
       <section>
         <form id="picoMePlease">
@@ -149,14 +127,27 @@
           <!-- Range slider control -->
           <label for="range"
             >Range slider
-            <input type="range" min="0" max="100" value="50" id="range" name="range" />
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              id="range"
+              name="range"
+            />
           </label>
 
           <!-- States -->
 
           <label for="valid">
             Valid
-            <input type="text" id="valid" name="valid" placeholder="Valid" aria-invalid="false" />
+            <input
+              type="text"
+              id="valid"
+              name="valid"
+              placeholder="Valid"
+              aria-invalid="false"
+            />
           </label>
           <label for="invalid">
             Invalid
@@ -170,7 +161,13 @@
           </label>
           <label for="disabled">
             Disabled
-            <input type="text" id="disabled" name="disabled" placeholder="Disabled" disabled />
+            <input
+              type="text"
+              id="disabled"
+              name="disabled"
+              placeholder="Disabled"
+              disabled
+            />
           </label>
 
           <!-- Date-->
@@ -195,7 +192,12 @@
           <fieldset>
             <legend><strong>Checkboxes</strong></legend>
             <label for="checkbox-1">
-              <input type="checkbox" id="checkbox-1" name="checkbox-1" checked />
+              <input
+                type="checkbox"
+                id="checkbox-1"
+                name="checkbox-1"
+                checked
+              />
               Checkbox
             </label>
             <label for="checkbox-2">
@@ -208,7 +210,13 @@
           <fieldset>
             <legend><strong>Radio buttons</strong></legend>
             <label for="radio-1">
-              <input type="radio" id="radio-1" name="radio" value="radio-1" checked />
+              <input
+                type="radio"
+                id="radio-1"
+                name="radio"
+                value="radio-1"
+                checked
+              />
               Radio button
             </label>
             <label for="radio-2">
@@ -221,18 +229,33 @@
           <fieldset>
             <legend><strong>Switches</strong></legend>
             <label for="switch-1">
-              <input type="checkbox" id="switch-1" name="switch-1" role="switch" checked />
+              <input
+                type="checkbox"
+                id="switch-1"
+                name="switch-1"
+                role="switch"
+                checked
+              />
               Switch
             </label>
             <label for="switch-2">
-              <input type="checkbox" id="switch-2" name="switch-2" role="switch" />
+              <input
+                type="checkbox"
+                id="switch-2"
+                name="switch-2"
+                role="switch"
+              />
               Switch
             </label>
           </fieldset>
 
           <!-- Buttons -->
           <input type="reset" value="Reset" onclick="event.preventDefault()" />
-          <input type="submit" value="Submit" onclick="event.preventDefault()" />
+          <input
+            type="submit"
+            value="Submit"
+            onclick="event.preventDefault()"
+          />
         </form>
       </section>
     </main>
