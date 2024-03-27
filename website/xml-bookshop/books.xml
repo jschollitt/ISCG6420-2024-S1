@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<BOOKS>
+	<BOOK>
+		<TITLE>Empire Burlesque</TITLE>
+		<AUTHOR>Bob Dylan</AUTHOR>
+		<COUNTRY>USA</COUNTRY>
+		<COMPANY>Columbia</COMPANY>
+		<PRICE>10.90</PRICE>
+		<YEAR>1985</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>Hide your heart</TITLE>
+		<AUTHOR>Bonnie Tyler</AUTHOR>
+		<COUNTRY>UK</COUNTRY>
+		<COMPANY>CBS Records</COMPANY>
+		<PRICE>19.90</PRICE>
+		<YEAR>1988</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>Greatest Hits</TITLE>
+		<AUTHOR>Dolly Parton</AUTHOR>
+		<COUNTRY>USA</COUNTRY>
+		<COMPANY>RCA</COMPANY>
+		<PRICE>29.90</PRICE>
+		<YEAR>1982</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>Still got the blues</TITLE>
+		<AUTHOR>Gary Moore</AUTHOR>
+		<COUNTRY>UK</COUNTRY>
+		<COMPANY>Virgin records</COMPANY>
+		<PRICE>50.20</PRICE>
+		<YEAR>1990</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>Eros</TITLE>
+		<AUTHOR>Eros Ramazzotti</AUTHOR>
+		<COUNTRY>EU</COUNTRY>
+		<COMPANY>BMG</COMPANY>
+		<PRICE>35.90</PRICE>
+		<YEAR>1997</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>One night only</TITLE>
+		<AUTHOR>Bee Gees</AUTHOR>
+		<COUNTRY>UK</COUNTRY>
+		<COMPANY>Polydor</COMPANY>
+		<PRICE>10.90</PRICE>
+		<YEAR>1998</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>Sylvias Mother</TITLE>
+		<AUTHOR>Dr.Hook</AUTHOR>
+		<COUNTRY>UK</COUNTRY>
+		<COMPANY>CBS</COMPANY>
+		<PRICE>18.10</PRICE>
+		<YEAR>1973</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>Maggie May</TITLE>
+		<AUTHOR>Rod Stewart</AUTHOR>
+		<COUNTRY>UK</COUNTRY>
+		<COMPANY>Pickwick</COMPANY>
+		<PRICE>28.50</PRICE>
+		<YEAR>1990</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>Romanza</TITLE>
+		<AUTHOR>Andrea Bocelli</AUTHOR>
+		<COUNTRY>EU</COUNTRY>
+		<COMPANY>Polydor</COMPANY>
+		<PRICE>12.80</PRICE>
+		<YEAR>1996</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>When a man loves a woman</TITLE>
+		<AUTHOR>Percy Sledge</AUTHOR>
+		<COUNTRY>USA</COUNTRY>
+		<COMPANY>Atlantic</COMPANY>
+		<PRICE>38.70</PRICE>
+		<YEAR>1987</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>Black angel</TITLE>
+		<AUTHOR>Savage Rose</AUTHOR>
+		<COUNTRY>EU</COUNTRY>
+		<COMPANY>Mega</COMPANY>
+		<PRICE>15.90</PRICE>
+		<YEAR>1995</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>1999 Grammy Nominees</TITLE>
+		<AUTHOR>Many</AUTHOR>
+		<COUNTRY>USA</COUNTRY>
+		<COMPANY>Grammy</COMPANY>
+		<PRICE>10.20</PRICE>
+		<YEAR>1999</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>For the good times</TITLE>
+		<AUTHOR>Kenny Rogers</AUTHOR>
+		<COUNTRY>UK</COUNTRY>
+		<COMPANY>Mucik Master</COMPANY>
+		<PRICE>22.70</PRICE>
+		<YEAR>1995</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>Big Willie style</TITLE>
+		<AUTHOR>Will Smith</AUTHOR>
+		<COUNTRY>USA</COUNTRY>
+		<COMPANY>Columbia</COMPANY>
+		<PRICE>23.90</PRICE>
+		<YEAR>1997</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>Tupelo Honey</TITLE>
+		<AUTHOR>Van Morrison</AUTHOR>
+		<COUNTRY>UK</COUNTRY>
+		<COMPANY>Polydor</COMPANY>
+		<PRICE>26.20</PRICE>
+		<YEAR>1971</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>Soulsville</TITLE>
+		<AUTHOR>Jorn Hoel</AUTHOR>
+		<COUNTRY>Norway</COUNTRY>
+		<COMPANY>WEA</COMPANY>
+		<PRICE>17.90</PRICE>
+		<YEAR>1996</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>The very best of</TITLE>
+		<AUTHOR>Cat Stevens</AUTHOR>
+		<COUNTRY>UK</COUNTRY>
+		<COMPANY>Island</COMPANY>
+		<PRICE>18.90</PRICE>
+		<YEAR>1990</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>Stop</TITLE>
+		<AUTHOR>Sam Brown</AUTHOR>
+		<COUNTRY>UK</COUNTRY>
+		<COMPANY>A and M</COMPANY>
+		<PRICE>38.90</PRICE>
+		<YEAR>1988</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>Bridge of Spies</TITLE>
+		<AUTHOR>T'Pau</AUTHOR>
+		<COUNTRY>UK</COUNTRY>
+		<COMPANY>Siren</COMPANY>
+		<PRICE>17.90</PRICE>
+		<YEAR>1987</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>Private Dancer</TITLE>
+		<AUTHOR>Tina Turner</AUTHOR>
+		<COUNTRY>UK</COUNTRY>
+		<COMPANY>Capitol</COMPANY>
+		<PRICE>21.90</PRICE>
+		<YEAR>1983</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>Midt om natten</TITLE>
+		<AUTHOR>Kim Larsen</AUTHOR>
+		<COUNTRY>EU</COUNTRY>
+		<COMPANY>Medley</COMPANY>
+		<PRICE>26.80</PRICE>
+		<YEAR>1983</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>Pavarotti Gala Concert</TITLE>
+		<AUTHOR>Luciano Pavarotti</AUTHOR>
+		<COUNTRY>UK</COUNTRY>
+		<COMPANY>DECCA</COMPANY>
+		<PRICE>19.90</PRICE>
+		<YEAR>1991</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>The dock of the bay</TITLE>
+		<AUTHOR>Otis Redding</AUTHOR>
+		<COUNTRY>USA</COUNTRY>
+		<COMPANY>Atlantic</COMPANY>
+		<PRICE>17.90</PRICE>
+		<YEAR>1987</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>Picture book</TITLE>
+		<AUTHOR>Simply Red</AUTHOR>
+		<COUNTRY>EU</COUNTRY>
+		<COMPANY>Elektra</COMPANY>
+		<PRICE>27.20</PRICE>
+		<YEAR>1985</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>Red</TITLE>
+		<AUTHOR>The Communards</AUTHOR>
+		<COUNTRY>UK</COUNTRY>
+		<COMPANY>London</COMPANY>
+		<PRICE>37.80</PRICE>
+		<YEAR>1987</YEAR>
+	</BOOK>
+	<BOOK>
+		<TITLE>Unchain my heart</TITLE>
+		<AUTHOR>Joe Cocker</AUTHOR>
+		<COUNTRY>USA</COUNTRY>
+		<COMPANY>EMI</COMPANY>
+		<PRICE>18.20</PRICE>
+		<YEAR>1987</YEAR>
+	</BOOK>
+</BOOKS>

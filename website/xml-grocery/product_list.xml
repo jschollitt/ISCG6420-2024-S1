@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="product_list.css"?>
+<ProductList>
+	<Product>
+		<ProductName>milk</ProductName>
+		<Image>milk.jpg</Image>
+		<Price>5</Price>		
+	</Product>	
+	<Product>
+		<ProductName>cornflake</ProductName>
+		<Image>cornflake.jpg</Image>
+		<Price>10</Price>		
+	</Product>	
+	<Product>
+		<ProductName>soda</ProductName>
+		<Image>soda.jpg</Image>
+		<Price>2</Price>		
+	</Product>	
+	<Product>
+		<ProductName>bread</ProductName>
+		<Image>bread.jpg</Image>
+		<Price>8</Price>		
+	</Product>
+	<Product>
+		<ProductName>butter</ProductName>
+		<Image>butter.jpg</Image>
+		<Price>2</Price>		
+	</Product>
+	<Product>
+		<ProductName>agria potatoes</ProductName>
+		<Image>agria_potatoes.jpg</Image>
+		<Price>20</Price>		
+	</Product>
+</ProductList>

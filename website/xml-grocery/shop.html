@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <title>Shop</title>
+</head>
+
+<body>
+    <script>
+        function product(productName, price, image) {
+            this.productName = productName;
+            this.price = price;
+            this.image = image;
+        }
+
+        var products = [];
+
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xmlhttp.open("GET", "product_list.xml", false);
+        xmlhttp.send();
+        xmlDoc = xmlhttp.responseXML;
+        var x = xmlDoc.getElementsByTagName("Product");
+
+        var pName = '';
+        var pPrice = 0;
+        var pImage = '';
+        for (i = 0; i < x.length; i++) {
+            pName = x[i].getElementsByTagName("ProductName")[0].childNodes[0].nodeValue;
+            pPrice = Number(x[i].getElementsByTagName("Price")[0].childNodes[0].nodeValue);
+            pImage = x[i].getElementsByTagName("Image")[0].childNodes[0].nodeValue;
+            var prod = new product(pName, pPrice, pImage);
+            products[i] = prod;
+        }
+
+        function show_products() {
+            var displayText = '';
+            var table = document.getElementById("dispProduct");
+
+            for (var i = 0; i < products.length; i++) {
+                var row = table.insertRow(i);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var cellName = 's' + i;
+
+                cell4.setAttribute("name", cellName);
+                cell1.innerHTML = products[i].productName;
+                cell2.innerHTML = '$' + products[i].price;
+                cell3.innerHTML = '<img src=images/' + products[i].image + ' />';
+
+                var checkbox = document.createElement("input");
+                var cname = 'ch' + i;
+                checkbox.setAttribute("type", "checkbox");
+                checkbox.setAttribute("name", i);
+                checkbox.setAttribute("id", cname);
+                checkbox.setAttribute("value", products[i].price);
+                checkbox.checked = false;
+                checkbox.setAttribute('onclick', 'myChange(this.value, this.name)');
+                cell4.appendChild(checkbox);
+
+                var cell5 = row.insertCell(4);
+                var cellName5 = 'ss' + i;
+                cell5.setAttribute('name', cellName5); // this is for quantity
+                var quantityInput = document.createElement('input');
+                var qname = 'q' + i;
+                quantityInput.setAttribute('type', 'number');
+                quantityInput.setAttribute('name', qname);
+                quantityInput.setAttribute('id', qname);
+                quantityInput.setAttribute('style', 'width:35px;');
+                cell5.appendChild(quantityInput);
+            }
+        }
+
+        function calculate_cost() {
+            var result = '';
+            var ncheckbox = '';
+            var qinput = '';
+            var total = 0;
+
+            for (var i = 0; i < products.length; i++) {
+                ncheckbox = 'ch' + i;
+                qinput = 'q' + i;
+                var x = document.getElementById(ncheckbox);
+                if (x.checked) {
+                    total = total + Number(x.value) * Number(document.getElementById(qinput).value);
+                }
+            }
+            document.getElementById("calcost").innerHTML = "Total to pay: $" + total;
+        }
+
+        function myChange(val, qn) {
+            if (document.getElementById('ch' + qn).checked) {
+                document.getElementById('q' + qn).value = 1;
+            }
+            else {
+                document.getElementById('q' + qn).value = 0;
+            }
+        }
+    </script>
+    <h1>Shop</h1>
+    <button type="button" onclick="show_products()">display all products</button>
+    <table border='1' id="dispProduct">
+    </table>
+    <button type="button" onclick="calculate_cost()">Calculate Total</button>
+    <p id="calcost"></p>
+</body>
+
+</html>

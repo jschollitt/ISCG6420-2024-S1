@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StaffList>
+	<Staff>
+		<StaffName>Jerry Jo</StaffName>
+		<Position>General Manager</Position>	
+		<Image>Jerry.jpg</Image>			
+	</Staff>	
+	<Staff>
+		<StaffName>Jessica</StaffName>
+		<Position>Project Leader</Position>	
+		<Image>Jessica.jpg</Image>			
+	</Staff>	
+	<Staff>
+		<StaffName>Bob</StaffName>
+		<Position>Project Leader</Position>	
+		<Image>Bob.jpg</Image>			
+	</Staff>	
+	<Staff>
+		<StaffName>Karolina</StaffName>
+		<Position>Administrator</Position>	
+		<Image>Karolina.jpg</Image>			
+	</Staff>
+	<Staff>
+		<StaffName>Lusi</StaffName>
+		<Position>Senior Developer</Position>
+		<Image>Lusi.jpg</Image>				
+	</Staff>
+	<Staff>
+		<StaffName>Jim</StaffName>
+		<Position>Developer</Position>	
+		<Image>Jim.jpg</Image>			
+	</Staff>
+	<Staff>
+		<StaffName>Daniel</StaffName>
+		<Position>Developer</Position>
+		<Image>Daniel.jpg</Image>
+				
+	</Staff>
+	<Staff>
+		<StaffName>Mary</StaffName>
+		<Position>Tester</Position>	
+		<Image>Mary.jpg</Image>			
+	</Staff>
+	<Staff>
+		<StaffName>Bella</StaffName>
+		<Position>Tester</Position>	
+		<Image>Bella.jpg</Image>			
+	</Staff>
+</StaffList>

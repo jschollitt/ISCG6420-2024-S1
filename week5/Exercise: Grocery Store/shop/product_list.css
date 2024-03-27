@@ -1,0 +1,25 @@
+ProductList
+{
+background-color: #ffffff;
+width: 100%;
+margin-left: 20pt;
+}
+Product
+{
+display: block;
+margin-bottom: 30pt;
+margin-left: 20pt;
+background-color: #E0FFFF;
+}
+ProductName
+{
+color: #20B2AA;
+font-size: 20pt;
+margin-left: 20pt;
+}
+Price
+{
+color: #778899;
+margin-left: 20pt;
+font-size: 20pt;
+}

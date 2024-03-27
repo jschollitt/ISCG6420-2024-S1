@@ -1,0 +1,28 @@
+/* 
+CSS File for the Shopping Cart Exercise
+This file defines the styles of the page elements in the Shopping Cart Exercise
+*/
+.display{background-color:#CCC; 
+         color:#036;
+	     border:#900 1px solid;
+		 overflow:auto;
+		 display: inline-block;
+		 vertical-align:top;
+		 margin-left:10px;
+		 margin-right:10px;}
+			 
+#txtContainer{white-space:nowrap; 
+              text-align:center;}
+			 
+#txtBookInfo{width:570px;
+			 height:500px;}
+			 
+#txtCart{width:auto;
+		 height:350px;
+		 vertical-align:top;}
+		 
+#tblBook, #tblCart{ margin-left:10px;
+		  font-family:"Book Antiqua", Palatino, serif; 
+		  font-size:18px;}
+		  
+h1{text-align:center; font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size:28px; color:#900;}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Company - Staff</title>
+    <style>
+        #dispStaff {
+            background-color: lightblue;
+        }
+
+        #dispStaff {
+            padding: 30px;
+        }
+
+        #dispStaff,
+        td {
+            font-family: sans-serif, courier;
+            padding: 30px;
+        }
+
+        img {
+            border-radius: 30px;
+        }
+
+        .staffnames {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function staff(staffName, position, image) {
+            this.staffName = staffName;
+            this.position = position;
+            this.image = image;
+
+        }
+        var staffArray = []; //Array declaration - empty, and it will be load from XML file
+        // XML -The XMLHttpRequest object is used to exchange data with a server behind the scenes.
+
+        if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        }
+        else {// code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.open("GET", "staff_list.xml", false);
+        xmlhttp.send();
+        xmlDoc = xmlhttp.responseXML;
+        var x = xmlDoc.getElementsByTagName("Staff");
+
+        var sName = '';
+        var sPos = '';
+        var sImage = '';
+        for (i = 0; i < x.length; i++) {
+            sName = x[i].getElementsByTagName("StaffName")[0].childNodes[0].nodeValue;
+            sPos = x[i].getElementsByTagName("Position")[0].childNodes[0].nodeValue;
+            sImage = x[i].getElementsByTagName("Image")[0].childNodes[0].nodeValue;
+
+            var onePerson = new staff(sName, sPos, sImage);
+            staffArray[i] = onePerson;
+        }
+
+        function display_staff() {
+            var displaytext = '';
+            var table = document.getElementById('dispStaff');
+            var numRows = 2;
+            var numCol = 5; //  
+            var sNum = 0;
+            for (var i = 0; i < numRows; i++) {  // create row - <tr>
+                var row = table.insertRow(i);
+                var cells = [];
+                for (var j = 0; j < numCol; j++) {  // create <td> in the table
+                    var cellName = 's' + i + j;
+                    cells.push(row.insertCell(j));
+                    cells[j].setAttribute('name', cellName);
+
+                    if (sNum < staffArray.length) {
+                        cells[j].innerHTML = '<img src="images/' + staffArray[sNum].image + '" />' + '<br/><div class="staffnames">' + staffArray[sNum].staffName + '</div><br/>' + staffArray[sNum].position;
+                    }
+                    sNum = sNum + 1;
+                }
+            }
+        }
+    </script>
+    <h1>IT Company</h1>
+    <button type="button" onclick="display_staff()">display staff</button>
+    <table style="border: 0;" id="dispStaff">
+    </table>
+</body>
+
+</html>
