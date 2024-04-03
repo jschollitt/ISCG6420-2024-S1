@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Week 6</title>
+
+  <link rel="stylesheet" href="./week6.css" />
+
+  <script src="https://kit.fontawesome.com/5cca347ecc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <main>
+    <header>
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./semantic.html">Semantic</a>
+        <a href="./week2.html">Week 2</a>
+        <a href="./week3.html">Week 3</a>
+        <a href="./week4.html">Week 4</a>
+        <a href="./week5.html">Week 5</a>
+      </nav>
+      <h1>Week 6 - Canvas</h1>
+    </header>
+
+    <section>
+      <h2 class="underline">Drawing On Canvas</h2>
+      <div class="container-half card">
+        <canvas id="w6canvas1" width="400" height="400"></canvas>
+      </div>
+      <div class="container-half card">
+        <canvas id="w6canvas2" width="400" height="400"></canvas>
+      </div>
+      <script src="./canvas/canvasDrawing.js"></script>
+    </section>
+
+    <section>
+      <div class="center" style="width: 400px;">
+        <div id="outer">
+          <form>
+            <label class="container">Vertical
+              <input type="radio" checked="checked" name="radio" oninput="SetGradientDir(1)">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Horizontal
+              <input type="radio" name="radio" oninput="SetGradientDir(2)">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Diagonal A
+              <input type="radio" name="radio" oninput="SetGradientDir(3)">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Diagonal B
+              <input type="radio" name="radio" oninput="SetGradientDir(4)">
+              <span class="checkmark"></span>
+            </label>
+          </form>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange" oninput="SliderUpdate(this)">
+          </div>
+          <canvas id="w6canvas8" width="400" height="400">
+            Your browser doesn't support the canvas! Try another browser.
+          </canvas>
+        </div>
+      </div>
+      <script src="./canvas/gradientSlider.js"></script>
+    </section>
+    <section>
+      <h2 class="underline">Animating with Intervals</h2>
+      <div class="center" style="width: 800px;">
+        <canvas id="w6canvas5" width="800" height="400"></canvas>
+      </div>
+      <script src="./canvas/animationInterval.js"></script>
+    </section>
+
+    <section>
+      <h2 class="underline">Media On Canvas</h2>
+      <div class="container-half card">
+        <canvas id="w6canvas3" width="400" height="400"></canvas>
+      </div>
+      <div class="container-half card">
+        <canvas id="w6canvas4" width="400" height="400"></canvas>
+      </div>
+      <div style="visibility: hidden; display: none;">
+        <img src="./assets/PaparoaTrack1.PNG" id="canvas4Img1" />
+        <img src="./assets/PaparaoTrack2.PNG" id="canvas4Img2" />
+      </div>
+      <script src="./canvas/canvasMedia.js"></script>
+    </section>
+
+    <section>
+      <h2 class="underline">Drawing a Spiral</h2>
+      <div class="center" style="width: 800px;">
+        <canvas id="w6canvas6" width="800" height="400"></canvas>
+      </div>
+      <script src="./canvas/spiral.js"></script>
+    </section>
+
+    <section>
+      <h2 class="underline">Animated Face</h2>
+      <div class="center" style="width: 500px;">
+        <canvas id="w6canvas7" width="500" height="500"></canvas>
+      </div>
+      <script src="./canvas/face.js"></script>
+    </section>
+
+    <section>
+      <h2 class="underline">Basic Mouse Input</h2>
+      <div class="center" style="width: 500px;">
+        <canvas id="w6canvas9" width="500" height="500"></canvas>
+      </div>
+      <script src="./canvas/input.js"></script>
+    </section>
+  </main>
+</body>
+
+</html>
