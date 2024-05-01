@@ -1,0 +1,254 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.clear::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+html,
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #000;
+    background-color: #f1f1f1;
+}
+
+body {
+    margin-top: 0;
+}
+
+section {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding: 16px;
+    border-radius: 0.5em;
+    margin: 8px 8px 16px 8px;
+    float: left;
+    display: block;
+    width: 100%;
+}
+
+article {
+    padding: 4px;
+    margin: 4px;
+    border-radius: 0.5em;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+nav {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+    margin: 0px 0px 16px 0px;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+
+.underline {
+    border-bottom: 1px solid #d0d0d0;
+}
+
+nav a {
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #206E32;
+    color: #fff;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+
+button {
+    background-color: #206E32;
+    border: none;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 0.5em;
+}
+
+code {
+    text-align: left;
+    font-family: Consolas, "courier new";
+    background-color: #f1f1f1;
+    padding: 2px;
+}
+
+pre {
+    text-align: left;
+    width: fit-content;
+    margin: 10px auto;
+}
+
+span {
+    margin: 0px;
+}
+
+canvas {
+    border: #000 solid 1px;
+}
+
+td {
+    border: #000 solid 1px;
+}
+
+.container-half {
+    padding: 8px;
+    width: 48%;
+    margin: 1%;
+    float: left;
+    box-sizing: inherit;
+    min-height: 300px;
+    min-width: 500px;
+}
+
+.container-third {
+    padding: 8px;
+    width: 31.33333%;
+    margin: 1%;
+    float: left;
+    box-sizing: inherit;
+    text-align: center;
+    min-height: 200px;
+}
+
+.center {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.card {
+    border: 1px solid #adadad8a;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.062);
+    position: relative;
+}
+
+.card-title {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background-color: #fff;
+}
+
+.float {
+    float: left;
+}
+
+.demo {
+    border: #000 solid 1px;
+    padding: 10px;
+    margin: 15px auto;
+    width: fit-content;
+}
+
+.demoBox {
+    width: 200px;
+    height: 200px;
+    border: #000 solid 1px;
+    text-align: left;
+    padding: 30px;
+    margin: auto;
+    display: block;
+    float:left;
+}
+
+#ex8 {
+    width: 822px;
+}
+
+#lightbox {
+    display: none;
+}
+
+.colour-boxes {
+    border-width: 2px;
+    border-color: black;
+}
+
+.colour-boxes td {
+    width: 300px;
+    height: 150px;
+}
+
+#ex4overlay {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-width: 3px;
+    border-color: black;
+    background-color: gray;
+    margin-left: 100px;
+    margin-top: 25px;
+}
+
+#ex9zone {
+    width: 800px;
+    height: 360px;
+    position: relative;
+}
+
+.ex9animate {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: #206E32;
+    color: #fff;
+}
+
+#ex91 {
+    top: 10px;
+}
+
+#ex92 {
+    top: 130px;
+}
+
+#ex93 {
+    top: 250px;
+}
+
+#ex10zone {
+    width: 500px;
+    height:500px;
+}
+
+#ex10animate {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: #206E32;
+}

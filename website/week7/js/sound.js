@@ -1,10 +1,10 @@
 // Credit: Luke.RUSTLTD on opengameart.org.
 // https://opengameart.org/content/wind1
-let bgAudio = new Sound("./assets/wind1.wav");
+let bgAudio = new Sound("../assets/wind1.wav");
 
 // Credit: p0ss on opengameart.org.
 // https://opengameart.org/content/interface-sounds-starter-pack
-let actionAudio = new Sound("./assets/appear-online.ogg");
+let actionAudio = new Sound("../assets/appear-online.ogg");
 actionAudio.play();
 
 let playBGAudio = document.getElementById("bgAudioPlay");

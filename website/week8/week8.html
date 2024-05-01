@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Week 8</title>
+
+    <link rel="stylesheet" href="./week8.css" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <nav>
+                <a href="../index.html">Home</a>
+            </nav>
+            <h1>Week 8 - jQuery</h1>
+        </header>
+
+        <!-- Section 1 -->
+        <section class="txt-center">
+            <h2 class="underline">jQuery Selectors</h2>
+            <subtitle>Code</subtitle>
+            <pre class="prettyprint">$('#ex1DivButton').click(function () {
+    let colour = getRandomColour();
+    $('#demo1 div').css("background-color", colour);
+});
+        
+$('#ex1ClassButton').click(function () {
+    let colour = getRandomColour();
+    $('.ex1DemoClass').css("background-color", colour);
+});
+        
+$('#ex1IDButton').click(function () {
+    let colour = getRandomColour();
+    $('#ex1DemoID').css("background-color", colour);
+});</pre>
+
+            <subtitle>Click on the buttons to recolour the selected elements</subtitle>
+            <div>
+                <button id="ex1DivButton">Div</button>
+                <button id="ex1ClassButton">Class</button>
+                <button id="ex1IDButton">ID</button>
+            </div>
+            <div id="demo1" class="demo clear">
+                <div class="demoBox">
+                    Div
+                </div>
+                <div class="demoBox ex1DemoClass">
+                    Div Class
+                </div>
+                <div id="ex1DemoID" class="demoBox ex1DemoClass">
+                    Div Class ID
+                </div>
+            </div>
+            <script>
+
+            </script>
+        </section>
+
+        <section class="txt-center">
+            <h2 class="underline">Selector Filtering</h2>
+            <subtitle>Code</subtitle>
+            <pre class="prettyprint">$('input:radio[name=radio-group]').change(function() {
+    $('#ex2Output').html($('input:radio[name="radio-group"]:checked').val());
+});</pre>
+
+            <subtitle>Change the radio button selection</subtitle>
+            <div class="demo">
+                <div>
+                    <label>
+                        <input type="radio" name="radio-group" value="yes" checked="checked" /> Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="radio-group" value="no" /> No
+                    </label>
+                    <label>
+                        <input type="radio" name="radio-group" value="maybe" /> Maybe
+                    </label>
+                    <label>
+                        <input type="radio" name="radio-group" value="I dunno" /> I dunno
+                    </label>
+                </div>
+                <h4>Selected option is <span id="ex2Output"></span></h4>
+            </div>
+            </div>
+        </section>
+
+        <section class="txt-center">
+            <h2 class="underline">Click event</h2>
+            <subtitle>Code</subtitle>
+            <pre class="prettyprint">$('.ex3Click').click(function () {
+    $(this).css("background-color", getRandomColour());
+});</pre>
+
+            <subtitle>Click on the box to change its colour</subtitle>
+            <div class="demo clear">
+                <div class="ex3Click demoBox">
+                    Click me
+                </div>
+                <div class="ex3Click demoBox">
+                    or me
+                </div>
+                <div class="ex3Click demoBox">
+                    or me
+                </div>
+            </div>
+            <script>
+
+            </script>
+        </section>
+
+        <section class="txt-center">
+            <h2 class="underline">Hover</h2>
+            <subtitle>Code</subtitle>
+            <pre class="prettyprint">$("#overlay").hide();
+$(".hover").hover(function () {
+    $("#overlay").css($(this).offset());
+    $("#overlay").html($(this).css("background-color").toString()).show();
+}, function () {
+    $("#overlay").hide();
+});</pre>
+
+            <subtitle>Mouse over the coloured cells to show an overlay</subtitle>
+            <div id="ex4overlay"></div>
+            <div class="demo">
+                <table class="colour-boxes">
+                    <tr>
+                        <td class="hover" style="background-color: red;">1</td>
+                        <td class="hover" style="background-color: orange;">2</td>
+                        <td class="hover" style="background-color: yellow;">3</td>
+                    </tr>
+                    <tr>
+                        <td class="hover" style="background-color: green;">4</td>
+                        <td class="hover" style="background-color: blue;">5</td>
+                        <td class="hover" style="background-color: purple;">6</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="txt-center" style="height: 900px;">
+            <h2 class="underline">Animation: slideToggle</h2>
+            <subtitle>Code</subtitle>
+            <pre class="prettyprint">$('#demo3').click(function() {
+    $('#lightbox').slideToggle(500);
+});</pre>
+
+            <subtitle>Click on the lightbox to toggle show or hide its content</subtitle>
+            <div id="ex8" class="demo">
+                <h4>Lightbox</h4>
+                <div id="lightbox">
+                    <img src="../assets/alonso-reyes-unsplash.jpg" alt="Sample Image" width="800" />
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="txt-center">
+            <h2 class="underline">Animations</h2>
+            <subtitle>Code</subtitle>
+            <pre class="prettyprint">let ex9Animated = false;
+
+$('#ex9 button').click(function () {
+    let x = ex9Animated ? '0px' : '700px';
+            
+    $('#ex91').animate({left: x}, "fast");
+    $('#ex92').animate({left: x}, "slow");
+    $('#ex93').animate({left: x}, 1000);
+    
+    ex9Animated = !ex9Animated;
+});</pre>
+            <subtitle>Click to start animation</subtitle>
+            <div id="ex9" class="demo">
+                <button>Start</button>
+                <div id="ex9zone">
+                    <div id="ex91" class="ex9animate">Fast</div>
+                    <div id="ex92" class="ex9animate">Slow</div>
+                    <div id="ex93" class="ex9animate">1000ms</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="txt-center">
+            <h2 class="underline">Animation chaining</h2>
+            <subtitle>Code</subtitle>
+            <pre class="prettyprint">$('#ex10 button').click(function () {
+let target = $('#ex10animate');
+target.animate({height: '500px', opacity: '0.5'}, "slow")
+      .animate({height: '500px', width: '500px', opacity: '1'}, "slow")
+      .animate({height: '100px', opacity: '0.5'}, "slow")
+      .animate({width: '100px', opacity: '1'}, "slow");
+});</pre>
+
+            <subtitle>Click to start animation</subtitle>
+            <div id="ex10" class="demo">
+                <button>Start</button>
+                <div id="ex10zone">
+                    <div id="ex10animate"></div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="txt-center">
+            <h2 class="underline">Input fetching & element creation</h2>
+            <subtitle>Code</subtitle>
+            <pre class="prettyprint">$('#ex11 button').click(function () {
+    $('#ex11 table').append(                // append table row
+        $('<tr>').append(                       // append table data
+            $('<td>').text(                     // set the text of td
+                $('#ex11 input:text').val() // fetch input value from user
+            )
+        )
+    );
+});</pre>
+            <div id="ex11" class="demo">
+                <label for="txtInputRecord">Enter Record Data</label>
+                <input type="text" name="record" id="txtInputRecord" />
+                <button>Enter</button>
+                <table>
+                    <tr>
+                    </tr>
+                </table>
+            </div>
+            </div>
+        </section>
+        
+        <script src="./js/week8.js"></script>
+</body>
+
+</html>

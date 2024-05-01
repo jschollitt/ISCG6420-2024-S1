@@ -5,7 +5,7 @@ function logoAnimation() {
     function Logo() {
         this.loading = true;
         this.image = new Image();
-        this.image.src = "./assets/dvd-logo.png";
+        this.image.src = "../assets/dvd-logo.png";
         this.image.onload = () => { this.loading = false; };
         this.scaledWidth = this.image.width / 4;
         this.scaledHeight = this.image.height / 4;
