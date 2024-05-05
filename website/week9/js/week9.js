@@ -1,11 +1,14 @@
-// Character Sprite sheet image from https://opengameart.org/content/classic-hero 
+// Character Sprite sheet image from https://opengameart.org/content/tux-classic-hero-style 
 const characterSpriteSheet = new Image();
-characterSpriteSheet.src = "./assets/hero4x.png"
+characterSpriteSheet.src = "./assets/penguin4x.png";
 characterSpriteSheet.onload = load;
-
+// Background image tilemap set from https://opengameart.org/content/snow-tiles
 const backgroundImage = new Image();
+backgroundImage.src = "./assets/snow.png";
+backgroundImage.onload = load;
 
-const awaitLoadCount = 2;
+// set this to the number of elements you want to load before initalising
+const awaitLoadCount = 3;
 let loadCount = 0;
 
 let lastTimeStamp = 0;
@@ -39,10 +42,12 @@ function init() {
         characterSpriteSheet,
         [64, 64],
         [
-            // idle track
-            [[0, 0], [64, 0], [128, 0], [192, 0], [0, 0], [64, 0], [128, 0], [0, 0], [64, 0], [128, 0], [0, 0], [64, 0], [128, 0]
-        ],
-            [[64, 64], [128, 64], [192, 64], [256, 64]]
+            [ // idle track
+                [0, 0], [64, 0], [128, 0], [192, 0], [0, 0], [64, 0], [128, 0], [0, 0], [64, 0], [128, 0], [0, 0], [64, 0], [128, 0]
+            ],
+            [ 
+                [0, 64], [64, 64], [128, 64],// [192, 64], [256, 64], [320, 64], [0, 128], [64, 128], [128, 128]
+            ]
         ],
         1
     );
@@ -67,6 +72,7 @@ function update() {
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(backgroundImage, 0, 0, 800, 600);
     character.draw(ctx);
     
 }
@@ -79,7 +85,7 @@ function Character(spritesheet, spriteSize, spriteFrames, spriteScale) {
         animationTrack: 0,
         animationFrame: 0,
         invertFrame: false,
-        frameTime: 250,
+        frameTime: 125,
         timeSinceLastFrame: 0,
         spriteScale: spriteScale,
         spriteCanvasSize: spriteSize, // temp value. Overwritten in init
@@ -96,10 +102,17 @@ function Character(spritesheet, spriteSize, spriteFrames, spriteScale) {
             switch(action) {
                 case "moveLeft":
                     this.direction = "left";
-                    this.animationTrack = 0;
+                    this.animationTrack = 2;
                     this.invertFrame = true;
                     break;
                 case "moveRight":
+                    this.direction = "right";
+                    this.animationTrack = 1;
+                    this.invert = false;
+                    break;
+                case "moveUp":
+                    this.direction = "up";
+                    this.animationTrack = 0;
             }
         },
         update(tick) {
