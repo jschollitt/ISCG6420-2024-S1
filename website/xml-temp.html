@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content"></div>
+    <script>
+        function Product(productName, price, image) {
+            this.productName = productName;
+            this.price = price;
+            this.image = image;
+        }
+
+        let products = [];
+
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", "./xml-grocery/product_list.xml", false);
+        xmlhttp.send();
+
+        xmlDoc = xmlhttp.responseXML;
+        let xmlData = xmlDoc.getElementsByTagName("Product");
+
+        for (let i = 0; i < xmlData.length; i++) {
+            let product = new Product(
+                xmlData[i].getElementsByTagName("ProductName"
+                )[0].childNodes[0].nodeValue,
+                xmlData[i].getElementsByTagName("Price")[0].childNodes[0].nodeValue,
+                xmlData[i].getElementsByTagName("Image")[0].childNodes[0].nodeValue
+            );
+            products[i] = product;
+        }
+
+        for (let i = 0; i < products.length; i++) {
+            let content = document.getElementById("content");
+            let row = document.createElement("div");
+            row.innerHTML = `${products[i].productName}: \$ ${products[i].price}`;
+            content.appendChild(row);
+        }
+    </script>
+    
+</body>
+</html>

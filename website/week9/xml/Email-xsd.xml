@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<email
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="server-uri/ Email.xsd">
+    <to>Receiver</to>
+    <from>Sender</from>
+    <subject>Upcoming appointment</subject>
+    <body>Reminder: Dentist 2024/02/30@14:30:00</body>
+</email> 

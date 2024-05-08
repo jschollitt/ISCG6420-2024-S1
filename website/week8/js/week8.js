@@ -80,15 +80,28 @@ $('document').ready(function () {
     
     // exercise 11: Element creation
     $('#ex11 button').click(function () {
-        $('#ex11 table').append(                // append table row
-            $('<tr>').append(                   // append table data
-                $('<td>').text(                 // set the text of td
-                    $('#ex11 input:text').val() // fetch input value from user
-                )
-            )
-        );
+        ex13Submit();
     })
-})
+
+    $('#ex11 input:text').on('keypress', function(e) {
+        if (e.keyCode === 13) {
+            ex13Submit();
+            $(this).val(function(i, val) {
+                return '';
+            });
+        }
+    })
+});
+
+function ex13Submit() {
+    $('#ex11 table').append(                // append table row
+        $('<tr>').append(                   // append table data
+            $('<td>').html(                 // set the text of td
+                $('#ex11 input:text').val() // fetch input value from user
+            )
+        )
+    );
+}
 
 function getRandomColour() {
     switch (Math.floor(Math.random() * 10)) {
