@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">
+
+    </div>
+    <canvas id="myCanvas" width="400" height="500"></canvas>
+    <script>
+        function Product(name, price) {
+            this.name = name;
+            this.price = price;
+        }
+
+        let products = [];
+
+        let xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", "./xml-grocery/product_list.xml", false);
+        xmlhttp.send();
+
+        let xmlDoc = xmlhttp.responseXML;
+        let xmlProducts = xmlDoc.getElementsByTagName("Product");
+
+        for (let i = 0; i < xmlProducts.length; i++) {
+            let product = new Product(
+                xmlProducts[i].getElementsByTagName("ProductName")[0].childNodes[0].nodeValue,
+                xmlProducts[i].getElementsByTagName("Price")[0].childNodes[0].nodeValue
+            );
+            products[i] = product;
+        }
+
+        
+        for (let i = 0; i < products.length; i++) {
+            let content = document.getElementById("content");
+            let row = document.createElement("div");
+            row.innerHTML = `${products[i].name}: \$ ${products[i].price}`;
+            content.appendChild(row);
+            draw(products[i]);
+        }
+        
+        function draw(product) {
+            let canvas = document.getElementById("myCanvas");
+            let ctx = canvas.getContext('2d');
+            ctx.fillStyle = "red";
+            ctx.fillRect(product.price * 10, product.price * 5, 20, 20);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email SYSTEM "Email.dtd">
+<email>
+    <to>Receiver</to>
+    <from>Sender</from>
+    <subject>Upcoming appointment</subject>
+    <body>Reminder: Dentist 2024/02/30@14:30:00</body>
+</email> 
