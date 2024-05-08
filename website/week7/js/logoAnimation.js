@@ -32,7 +32,9 @@ function logoAnimation() {
 
     let logos = [];
 
-    canvas.addEventListener("click", () => { logos.push(new Logo()); });
+    canvas.addEventListener("click", () => { 
+        logos.push(new Logo()); 
+    });
 
     logos.push(new Logo());
 
@@ -50,12 +52,10 @@ function logoAnimation() {
             logos[i].update();
             checkWallCollision(logos[i]);
         }
-
     }
 
     function draw() {
         ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
-
         for (let i = 0; i < logos.length; i++) {
             if (!logos[i].loading) {
                 logos[i].draw(ctx);
