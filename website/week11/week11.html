@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Week 11</title>
+
+    <link rel="stylesheet" href="./week11.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="./GroupProjectExampleLayout.html">Group Project Part A Example Layout</a>
+            </nav>
+            <h1>Week 11 - Web APIs</h1>
+        </header>
+
+        <!-- Section 1 -->
+        <section class="txt-center">
+            <h2 class="underline">Drag & Drop - Elements</h2>
+            <subtitle class="row">Click and drag the image between containers</subtitle>
+            <div class="ex1dropzone container-half card">
+                <img id="ex1drag" src="../assets/unitec.png" draggable="true" />
+            </div>
+            <div class="ex1dropzone container-half card">
+
+            </div>
+        </section>
+
+        <section class="txt-center">
+            <h2 class="underline">Drag & Drop - Files</h2>
+            <subtitle class="row">Drag an image file onto the dropzone, or use the file browser to select an image file
+            </subtitle>
+            <div id="ex2dropzone" class="content">
+                <div class="row">
+                    <button id="ex2button">Select File</button>
+                    <input id="ex2fileInput" type="file" accept="image/" />
+                </div>
+                <div class="row">
+                    <div id="ex2img">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="txt-center">
+            <h2 class="underline">Web Storage</h2>
+            <subtitle class="row">Data entered into the form can be saved and loaded from web storage</subtitle>
+            <div id="ex3content" class="content">
+                <div class="container">
+                    <label for="fname"><strong>First name</strong></label>
+                    <input id="fname" type="text" placeholder="Enter first name" name="fname" required>
+                    <label for="lname"><strong>Last name</strong></label>
+                    <input id="lname" type="text" placeholder="Enter last name" name="lname" required>
+                    <label for="mail"><strong>Email</strong></label>
+                    <input id="email" type="text" placeholder="Enter Email" name="mail" required>
+                </div>
+                <div>
+                    <strong><span id="ex3message"></span></strong>
+                </div>
+                <div class="buttonRow">
+                    <button id="ex3savesession" type="button"><strong>Save to Session Storage</strong></button>
+                    <button id="ex3savelocal" type="button"><strong>Save to Local Storage</strong></button>
+
+                </div>
+                <div class="buttonRow">
+                    <button id="ex3loadsession" type="button">Load from Session Storage</button>
+                    <button id="ex3loadlocal" type="button">Load from Local Storage</button>
+                </div>
+                <div class="buttonRow">
+                    <button id="ex3clear" type="button">Clear all storage</button>
+                </div>
+            </div>
+
+            </div>
+        </section>
+
+        <section class="txt-center">
+            <h2 class="underline">Geolocation</h2>
+            </subtitle>
+            <div id="ex4content" class="content">
+                <div class="row">
+                    <button id="ex4button">Request device Geolocation</button>
+                </div>
+                <div class="row">
+                    <div>Latitude: <span id="ex4lat"></span></div>
+                    <div>Longitude: <span id="ex4long"></span></div>
+                </div>
+                <div class="row">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/week11.js"></script>
+</body>
+
+</html>

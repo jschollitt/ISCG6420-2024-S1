@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Booking Guide</title>
+  </head>
+  <body>
+    <div class="w3-content" style="max-width: 1532px">
+      <div class="w3-container w3-margin-top" id="rooms">
+        <h3>Lodge Booking</h3>
+        <p>Description of lodges at Piha Holiday Lodge.</p>
+      </div>
+
+      <div class="w3-row-padding w3-margin-bottom">
+        <div class="w3-col m3">
+          <label><i class="fa fa-calendar-o"></i> Check In</label>
+          <input
+            class="w3-input w3-border"
+            type="date"
+            placeholder="DD MM YYYY"
+          />
+        </div>
+        <div class="w3-col m3">
+          <label><i class="fa fa-calendar-o"></i> Check Out</label>
+          <input
+            class="w3-input w3-border"
+            type="date"
+            placeholder="DD MM YYYY"
+          />
+        </div>
+        <div class="w3-col m2">
+          <label><i class="fa fa-male"></i> Capacity</label>
+          <input class="w3-input w3-border" type="number" placeholder="1" />
+        </div>
+        <div class="w3-col m2">
+          <label><i class="fa fa-search"></i> Search</label>
+          <button class="w3-button w3-block w3-black">Search</button>
+        </div>
+      </div>
+      <div class="w3-row-padding" id="about">
+        <div class="w3-col l3 12">
+          <h3>Book a Lodge</h3>
+          <h6>
+            Instructions for how to use the booking system. <br />This could
+            include:
+            <ol>
+              <li>Set the Check In and Check Out dates</li>
+              <li>Enter capacity required</li>
+              <li>Click Search to see available lodges</li>
+              <li>Hover over lodges to see details</li>
+              <li>Select an available lodge</li>
+              <li>Submit your booking</li>
+            </ol>
+          </h6>
+
+          <p>
+            We accept: <i class="fa fa-credit-card w3-large"></i>
+            <i class="fa fa-cc-mastercard w3-large"></i>
+            <i class="fa fa-cc-amex w3-large"></i>
+            <i class="fa fa-cc-cc-visa w3-large"></i
+            ><i class="fa fa-cc-paypal w3-large"></i>
+          </p>
+        </div>
+        <div class="w3-col l7 12">
+          <!-- Image of location/map -->
+          <img src="../assets/lodgemap.png" class="w3-image" style="width: 100%" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
