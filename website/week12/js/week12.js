@@ -105,12 +105,17 @@ function getGeo() {
         alert("Geolocation services not available");
         return;
     }
+    if ($('#apikey').val() === "" || $('#apikey').val() === null) {
+        alert("Weather request requires API key. Please enter a valid key.");
+        return;
+    }
     navigator.geolocation.getCurrentPosition(function (position) {
         let lat = position.coords.latitude;
         let long = position.coords.longitude;
+        let apikey = $('#apikey').val();
         setLoading('#ex2loader', true);
         $.ajax({
-            url: `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=d6f03de5d2301effb7d67aafdd141115`,
+            url: `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=${apikey}`,
             dataType: 'json',
             success: function (data) {
                 console.log(data);

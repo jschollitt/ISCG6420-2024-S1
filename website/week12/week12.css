@@ -251,6 +251,10 @@ textarea {
     }
 }
 
+#ex2content input[type=text] {
+    width: 50%;
+}
+
 
 #ex2loader {
     position: absolute;
