@@ -1,0 +1,443 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.clear::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+html,
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #000;
+    background-color: #f1f1f1;
+}
+
+body {
+    margin-top: 0;
+}
+
+section {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding: 16px;
+    border-radius: 0.5em;
+    margin: 8px 8px 16px 8px;
+    float: left;
+    display: block;
+    width: 100%;
+}
+
+article {
+    padding: 4px;
+    margin: 4px;
+    border-radius: 0.5em;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+nav {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+    margin: 0px 0px 16px 0px;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+
+.underline {
+    border-bottom: 1px solid #d0d0d0;
+}
+
+nav a {
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #206E32;
+    color: #fff;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+
+button {
+    background-color: #206E32;
+    border: none;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 0.5em;
+}
+
+code {
+    text-align: left;
+    font-family: Consolas, "courier new";
+    background-color: #f1f1f1;
+    padding: 2px;
+}
+
+pre {
+    text-align: left;
+    width: fit-content;
+    margin: 10px auto;
+}
+
+span {
+    margin: 0px;
+}
+
+canvas {
+    border: #000 solid 1px;
+}
+
+td {
+    border: #000 solid 1px;
+}
+
+.container-half {
+    padding: 8px;
+    width: 48%;
+    margin: 1%;
+    float: left;
+    box-sizing: inherit;
+    min-height: 300px;
+    min-width: 500px;
+}
+
+.container-third {
+    padding: 8px;
+    width: 31.33333%;
+    margin: 1%;
+    float: left;
+    box-sizing: inherit;
+    text-align: center;
+    min-height: 200px;
+}
+
+.center {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.row {
+    display: block;
+    width: 100%;
+}
+
+.card {
+    border: 1px solid #adadad8a;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.062);
+    position: relative;
+}
+
+.card-title {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background-color: #fff;
+}
+
+.float {
+    float: left;
+}
+
+.demo {
+    border: #000 solid 1px;
+    padding: 10px;
+    margin: 15px auto;
+    width: fit-content;
+}
+
+.demoBox {
+    width: 200px;
+    height: 200px;
+    border: #000 solid 1px;
+    text-align: left;
+    padding: 30px;
+    margin: auto;
+    display: block;
+    float: left;
+}
+
+#ex1form .container {
+    padding: 16px 0;
+    text-align: left;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 16px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    width: 100%;
+    height: 300px;
+    padding: 20px 20px;
+    margin: 22px 0 0 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+
+#ex1json {
+    height: 300px;
+    overflow: scroll;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: pre-wrap;
+}
+
+#ex1loader {
+    position: absolute;
+    background-color: #0000005d;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    align-content: center;
+    margin: -8px;
+    visibility: hidden;
+}
+
+#ex1loader .loader {
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: ex1load 1s linear infinite;
+}
+
+@keyframes ex1load {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+#ex2loader {
+    position: absolute;
+    background-color: #0000005d;
+    width: 600px;
+    height: 300px;
+    border-radius: 1em;
+    z-index: 100;
+    align-content: center;
+    visibility: hidden;
+}
+
+#ex2loader .loader {
+    width: 175px;
+    height: 80px;
+    display: block;
+    margin: auto;
+    background-image: radial-gradient(circle 25px at 25px 25px, #FFF 100%, transparent 0), radial-gradient(circle 50px at 50px 50px, #FFF 100%, transparent 0), radial-gradient(circle 25px at 25px 25px, #FFF 100%, transparent 0), linear-gradient(#FFF 50px, transparent 0);
+    background-size: 50px 50px, 100px 76px, 50px 50px, 120px 40px;
+    background-position: 0px 30px, 37px 0px, 122px 30px, 25px 40px;
+    background-repeat: no-repeat;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#ex2loader .loader::after {
+    content: '';
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 20px;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-color: #FF3D00 transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.weather-panel {
+    width: 600px;
+    height: 300px;
+    position: relative;
+    border-radius: 1em;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.062);
+    margin: 16px auto;
+    background: radial-gradient(#e66465, #9198e5);
+    background-size: 200% 400%;
+    color: #fff;
+}
+
+.weather-icon {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: -30px;
+    left: -12px;
+    border: 0;
+}
+
+.weather-description {
+    position: absolute;
+    top: 30px;
+    left: 165px;
+    font-size: 200%;
+}
+
+.weather-temp {
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    font-size: 800%;
+}
+
+.weather-temp-range {
+    position: absolute;
+    top: 240px;
+    left: 35px;
+    font-size: 180%;
+}
+
+.weather-temp {
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    font-size: 800%;
+
+}
+
+.weather-time {
+    position: absolute;
+    top: 30px;
+    left: 385px;
+    font-size: 200%;
+    text-align: right;
+    width: 200px;
+}
+
+.weather-date {
+    position: absolute;
+    top: 62px;
+    left: 385px;
+    font-size: 150%;
+    text-align: right;
+    width: 200px;
+}
+
+.weather-location {
+    position: absolute;
+    top: 235px;
+    left: 252px;
+    font-size: 200%;
+    text-align: right;
+    width: 328px;
+}
+
+#ex3content {
+    min-height: 500px;
+}
+
+.poke-panel {
+    width: 31.33333%;
+    margin: 1%;
+    position: relative;
+    float: left;
+    box-sizing: inherit;
+    text-align: center;
+    min-height: 500px;
+    border: 1px solid #adadad8a;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.062);
+    border-radius: 1em;
+}
+
+.poke-icon {
+    width: 100%;
+    height: 380px;
+    margin: 20px 0;
+}
+
+.poke-name {
+    width: 100%;
+    font-size: 300%;
+}
+
+.poke-type {
+    width: 100%;
+    font-size: 250%;
+}
+
+.poke-loader {
+    position: absolute;
+    background-color: #4e4c4c;
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+    z-index: 100;
+    align-content: center;
+    visibility: visible;
+}
+
+.poke-loader .loader {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: animloader 1s linear infinite;
+}
+
+@keyframes animloader {
+    0% {
+        box-shadow: -150px 0 #FFF inset;
+    }
+
+    100% {
+        box-shadow: 100px 0 #FFF inset;
+    }
+}
